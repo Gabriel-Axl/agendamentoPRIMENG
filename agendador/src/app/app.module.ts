@@ -9,6 +9,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import {CheckboxModule} from 'primeng/checkbox';
 import {DropdownModule} from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import {DropdownModule} from 'primeng/dropdown';
     CheckboxModule,
     DropdownModule,
     FormsModule,
+    ButtonModule,
     AppRoutingModule
   ],
   providers: [],
