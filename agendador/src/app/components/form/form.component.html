@@ -5,7 +5,7 @@
         <label for="binary"> Agendar por dia da semana</label>
     </div>
 
-    <div class="field-checkbox">
+    <div *ngIf="!checked" class="field-checkbox">
         <p-checkbox [(ngModel)]="qualquerMes" [binary]="true" inputId="binary" name="checkboxTodoMes"></p-checkbox>
         <label for="binary"> Qualquer mes</label>
     </div>
