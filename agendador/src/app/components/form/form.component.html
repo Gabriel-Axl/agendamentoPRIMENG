@@ -1,1 +1,11 @@
-<p>form works!</p>
+
+<div class="field-checkbox">
+    <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
+    <label for="binary"> Agendar por dia da semana</label>
+</div>
+
+<p-calendar placeholder="Selecione a data..." *ngIf="!checked" [(ngModel)]="dataDiaMes" [showTime]="true" [showSeconds]="true" dateFormat="dd/mm" hourFormat="24" [minDate]="minDate" [maxDate]="maxDate" ></p-calendar>
+
+<p-dropdown *ngIf="checked"  [options]="diasSemana" [(ngModel)]="selectedDia" placeholder="Selecione o dia" optionLabel="name" [showClear]="true"></p-dropdown>
+
+<p-calendar *ngIf="checked" [timeOnly]="true" [showSeconds]="true" [(ngModel)]="dataDiaSemana" [showTime]="true" [hourFormat]="'24'" [readonlyInput]="true" placeholder="Selecione a hora..."></p-calendar>
